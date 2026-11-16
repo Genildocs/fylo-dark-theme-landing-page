@@ -1,0 +1,55 @@
+/**
+ * Design tokens extracted from the "fylo-dark-theme-landing-page" Figma file
+ * (🎨 Design System page — Colors, Typography, Spacing).
+ *
+ * Import this ONCE in a global stylesheet (e.g. app/globals.css or
+ * styles/globals.css). CSS Modules can then read these custom properties
+ * via var(--token-name) — CSS custom properties are not scoped by
+ * CSS Modules, so this is the standard way to share tokens across modules.
+ */
+
+:root {
+  /* ---------- Colors ---------- */
+  --color-navy-950: #0b1524; /* desaturated dark blue — footer bg */
+  --color-navy-900: #181f2b; /* very dark blue — body bg */
+  --color-navy-850: #1b2330; /* dark blue — testimonial card bg */
+  --color-navy-800: #202a3c; /* very dark blue — intro/footer bg */
+  --color-navy-50: #dfe4f0;
+
+  --color-slate-900: #133041;
+  --color-slate-700: #4e6e7e;
+  --color-slate-500: #6b94a8;
+  --color-slate-100: #e4f4fd;
+
+  --color-blue-300: #62e0d9; /* cyan — primary accent */
+  --color-blue-250: #8adae3; /* cyan — hover state */
+
+  --color-red-500: #ff4242; /* error */
+  --color-gray-400: #c0c0c0; /* paragraph text on dark bg */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* colors/gradient/1 — botões "Get Started" (valores do Figma) */
+  --gradient-1: linear-gradient(167deg, #63e1d9 31.85%, #34a0cd 100%);
+
+  /* ---------- Spacing scale ---------- */
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+  --spacing-1000: 80px;
+  --spacing-1600: 128px;
+
+  /* ---------- Font families ---------- */
+  /* As variáveis --font-raleway-sans e --font-open-sans são criadas pelo
+     next/font no layout.tsx (o nome real da fonte é gerado com hash). */
+  --font-heading: var(--font-raleway-sans), "Raleway", sans-serif;
+  --font-body: var(--font-open-sans), "Open Sans", sans-serif;
+  --font-quote: var(--font-nunito-sans), "Nunito Sans", sans-serif;
+}

@@ -1,0 +1,68 @@
+/* ---------- Container ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-300);
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-300) 25px 0;
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  flex-shrink: 0;
+}
+
+/* Mobile: 80px de largura; a altura acompanha a proporção do SVG */
+.logo__image {
+  width: 80px;
+  height: auto;
+}
+
+/* ---------- Links ---------- */
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-300);
+  list-style: none;
+}
+
+/* Mobile: Text Preset 5 / Desktop: Text Preset 3 (Regular).
+   Sem composes aqui porque o tamanho muda no breakpoint. */
+.link {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color-white);
+  transition: color 0.2s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--color-blue-300);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1024px) {
+  .header {
+    padding: var(--spacing-1000) var(--spacing-1000) 0;
+  }
+
+  .logo__image {
+    width: 176px;
+  }
+
+  .links {
+    gap: var(--spacing-700);
+  }
+
+  .link {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,181 @@
+/* ---------- Container ---------- */
+.footer {
+  /* O padding de cima é maior porque o card "Get early access" invade o footer */
+  padding: 260px var(--spacing-300) var(--spacing-600);
+  background: var(--color-navy-950);
+  color: var(--color-white);
+}
+
+/* Mobile first: tudo empilhado em uma coluna */
+.footerGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 319px;
+  margin: 0 auto;
+}
+
+.footerGrid__logo {
+  grid-column: 1 / -1;
+  margin-bottom: var(--spacing-500);
+}
+
+/* ---------- Contato ---------- */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  font-style: normal; /* <address> vem em itálico por padrão */
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  list-style: none;
+}
+
+.contact__item {
+  composes: textPreset8 from "../styles/Typography.module.css";
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-200);
+}
+
+/* O endereço usa 16px; telefone e e-mail, 14px */
+.contact__address {
+  font-size: 16px;
+}
+
+/* Caixa de 24px do design; o SVG fica no canto de cima (local) ou centralizado */
+.icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.contact__address .icon {
+  place-items: start;
+  padding-top: 3px;
+}
+
+.icon__phone {
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------- Institucional ---------- */
+.institutional {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-500);
+  margin-top: var(--spacing-700);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+  list-style: none;
+}
+
+.link {
+  transition: color 0.2s ease;
+}
+
+.navLink {
+  composes: link;
+  composes: textPreset7Regular from "../styles/Typography.module.css";
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--color-blue-300);
+}
+
+/* ---------- Social media ---------- */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  margin-top: var(--spacing-600);
+  list-style: none;
+  zoom: calc(27 / 31); /* círculos de 27px no mobile, 31px no desktop */
+}
+
+.social__link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 31.2241px;
+  height: 31px;
+}
+
+.social__oval {
+  position: absolute;
+  inset: 0;
+}
+
+.social__icon {
+  background-color: var(--color-white);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  transition: background-color 0.2s ease;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus-visible .social__icon {
+  background-color: var(--color-blue-300);
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 162px var(--spacing-1000) var(--spacing-700);
+  }
+
+  .footerGrid {
+    /* endereço | telefone + e-mail | links | redes */
+    grid-template-columns: auto auto 1fr auto;
+    align-items: start;
+    max-width: 1240px;
+  }
+
+  .footerGrid__logo {
+    margin-bottom: var(--spacing-600);
+  }
+
+  /* address vira duas colunas da grade principal */
+  .contact {
+    display: contents;
+  }
+
+  .contact__address {
+    max-width: 379px;
+    margin-right: var(--spacing-1000);
+  }
+
+  .contact__list .contact__item {
+    gap: var(--spacing-300);
+  }
+
+  .icon__phone {
+    width: 18px;
+    height: 18px;
+  }
+
+  .institutional {
+    flex-direction: row;
+    gap: var(--spacing-1000);
+    justify-self: end;
+    margin: 0 126px 0 0;
+  }
+
+  .social {
+    gap: var(--spacing-200);
+    margin-top: 0;
+    zoom: 1;
+  }
+}

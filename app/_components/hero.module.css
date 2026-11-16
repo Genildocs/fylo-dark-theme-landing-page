@@ -1,0 +1,93 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-900);
+  width: 100%;
+  max-width: 734px;
+  text-align: center;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 304px;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+
+/* Mobile: Text Preset 2 → Desktop: Text Preset 1 */
+.title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* Mobile: Text Preset 8 → Desktop: Text Preset 6 */
+.description {
+  max-width: 296px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Botão com o gradiente do design system */
+.button {
+  display: grid;
+  place-items: center;
+  width: 240px;
+  height: 48px;
+  border-radius: 24px;
+  background: var(--gradient-1);
+  box-shadow: 2px 3px 3px rgb(0 0 0 / 0.16);
+
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-white);
+  transition: filter 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  filter: brightness(1.15);
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1024px) {
+  .hero {
+    gap: var(--spacing-700);
+  }
+
+  .illustration {
+    max-width: 720px;
+  }
+
+  .content {
+    gap: var(--spacing-500);
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    max-width: 589px;
+    font-size: 20px;
+  }
+
+  .button {
+    width: 280px;
+    height: 56px;
+    border-radius: 28px;
+    font-size: 16px;
+    /* No desktop o botão fica 32px abaixo do parágrafo, não 40px */
+    margin-top: calc(var(--spacing-400) - var(--spacing-500));
+  }
+}

@@ -1,0 +1,125 @@
+/**
+ * Typography presets from the Figma Design System → Typography section.
+ * Requires tokens.css to be imported globally (for --font-heading / --font-body).
+ *
+ * Usage:
+ *   import typography from '@/styles/Typography.module.css';
+ *   <h1 className={typography.textPreset1}>Title</h1>
+ */
+
+/* Raleway Bold 40px / 120% line-height / 0 letter-spacing — H1 */
+.textPreset1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Raleway Bold 20px / 120% / 0 — H2 */
+.textPreset2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Raleway Bold 16px / 120% / 0 — H3 (bold variant) */
+.textPreset3Bold {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Raleway Regular 16px / 120% / 0 — H3 (regular variant) */
+.textPreset3Regular {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Raleway Bold 14px / 120% / 0 — small heading / button label */
+.textPreset4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Raleway Regular 12px / 120% / 0 — caption / label */
+.textPreset5 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Open Sans Regular 20px / 150% / 0 — lead / large body */
+.textPreset6 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Open Sans Bold 16px / 150% / 0 — body (bold variant) */
+.textPreset7Bold {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Open Sans Regular 16px / 150% / 0 — body (regular variant) */
+.textPreset7Regular {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Open Sans Regular 14px / 150% / 0 — small body */
+.textPreset8 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Open Sans Bold 10px / 150% / 0.5px — small badge/label (bold) */
+.textPreset9Bold {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/* Open Sans Regular 10px / 180% / 0.5px — small badge/label (regular) */
+.textPreset9Regular {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* Open Sans Regular 7px / 150% / 0.5px — fine print */
+.textPreset10 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 7px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}

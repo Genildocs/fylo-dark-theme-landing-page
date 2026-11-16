@@ -1,0 +1,54 @@
+/**
+ * Color utility classes from the Figma Design System → Colors section.
+ * Requires tokens.css to be imported globally.
+ *
+ * Usage:
+ *   import colors from '@/styles/Colors.module.css';
+ *   <section className={colors.bgNavy900}>...</section>
+ *   <p className={colors.textGray400}>...</p>
+ */
+
+/* Backgrounds */
+.bgNavy950 { background-color: var(--color-navy-950); }
+.bgNavy900 { background-color: var(--color-navy-900); }
+.bgNavy850 { background-color: var(--color-navy-850); }
+.bgNavy800 { background-color: var(--color-navy-800); }
+.bgNavy50  { background-color: var(--color-navy-50); }
+
+.bgSlate900 { background-color: var(--color-slate-900); }
+.bgSlate700 { background-color: var(--color-slate-700); }
+.bgSlate500 { background-color: var(--color-slate-500); }
+.bgSlate100 { background-color: var(--color-slate-100); }
+
+.bgBlue300 { background-color: var(--color-blue-300); }
+.bgBlue250 { background-color: var(--color-blue-250); }
+
+.bgRed500 { background-color: var(--color-red-500); }
+.bgGray400 { background-color: var(--color-gray-400); }
+
+.bgWhite { background-color: var(--color-white); }
+.bgBlack { background-color: var(--color-black); }
+
+/* Text colors */
+.textNavy950 { color: var(--color-navy-950); }
+.textNavy900 { color: var(--color-navy-900); }
+.textNavy850 { color: var(--color-navy-850); }
+.textNavy800 { color: var(--color-navy-800); }
+.textNavy50  { color: var(--color-navy-50); }
+
+.textSlate900 { color: var(--color-slate-900); }
+.textSlate700 { color: var(--color-slate-700); }
+.textSlate500 { color: var(--color-slate-500); }
+.textSlate100 { color: var(--color-slate-100); }
+
+.textBlue300 { color: var(--color-blue-300); }
+.textBlue250 { color: var(--color-blue-250); }
+
+.textRed500 { color: var(--color-red-500); }
+.textGray400 { color: var(--color-gray-400); }
+
+.textWhite { color: var(--color-white); }
+.textBlack { color: var(--color-black); }
+
+/* Hover accent (cyan → lighter cyan), commonly used on links/icons */
+.hoverBlue:hover { color: var(--color-blue-250); }

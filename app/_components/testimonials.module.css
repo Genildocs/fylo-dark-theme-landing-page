@@ -1,0 +1,116 @@
+.testimonials {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  scroll-margin-top: var(--spacing-400);
+}
+
+/* “ em Nunito Sans, atrás do primeiro card */
+.quoteMark {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-family: var(--font-quote);
+  font-size: 80px;
+  line-height: 50px;
+  color: var(--color-blue-300);
+  pointer-events: none;
+}
+
+.list {
+  position: relative; /* fica por cima das aspas */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+  padding-top: 19px;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-200);
+  min-height: 160px;
+  padding: 23px 20px;
+  border-radius: 4px;
+  background-color: var(--color-navy-800);
+  box-shadow: 0 0 4px rgb(56 56 56 / 0.05);
+}
+
+/* Mobile: Text Preset 9 (Regular) → Desktop: Text Preset 8 */
+.text {
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+}
+
+.avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.author__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author__name {
+  composes: textPreset9Bold from "../styles/Typography.module.css";
+}
+
+.author__role {
+  composes: textPreset10 from "../styles/Typography.module.css";
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+  .testimonials {
+    max-width: 480px;
+  }
+}
+
+/* ---------- Desktop: 3 cards lado a lado ---------- */
+@media (min-width: 1024px) {
+  .testimonials {
+    max-width: 1180px;
+    /* no design esta seção fica 120px abaixo da anterior (as outras, 146px) */
+    margin-top: -26px;
+  }
+
+  .quoteMark {
+    top: 0;
+    font-size: 200px;
+    line-height: 200px;
+  }
+
+  .list {
+    flex-direction: row;
+    gap: var(--spacing-500);
+    padding: 59px 0 0 20px;
+  }
+
+  .list > li {
+    flex: 1 1 360px;
+  }
+
+  .card {
+    height: 100%;
+    min-height: 200px;
+    gap: var(--spacing-300);
+    padding: var(--spacing-400) 25px;
+    box-shadow: 5px 5px 4px rgb(56 56 56 / 0.1);
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+}

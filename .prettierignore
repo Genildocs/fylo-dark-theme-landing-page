@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Next.js build output and generated files
+.next/
+out/
+build/
+next-env.d.ts
+AGENTS.md
+
+# Lockfiles
+package-lock.json
+
+# Coverage and deploy artifacts
+coverage/
+.vercel/
+

@@ -1,0 +1,79 @@
+@import "tokens.css";
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Root ---------- */
+html {
+  /* O site só tem tema escuro: scrollbar e controles nativos ficam escuros sempre */
+  color-scheme: dark;
+}
+
+/*
+ * Geometria da página: header | main | footer
+ * - a linha do meio (1fr) ocupa o espaço que sobra,
+ *   então o footer fica sempre no fim da tela, mesmo com pouco conteúdo
+ * - 100dvh acompanha a altura real da tela no celular (barra do navegador)
+ */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  /* clip corta o vazamento horizontal sem quebrar position: sticky,
+     ao contrário de overflow-x: hidden */
+  overflow-x: clip;
+
+  /* Curva escura (navy-900) que atravessa a página atrás das seções.
+     O footer tem fundo próprio e cobre o final dela. */
+  background: var(--color-navy-850) url("/images/bg-curve-mobile.svg") no-repeat
+    0 280px / 104% auto; /* a curva é 392px num frame de 375px */
+  color: var(--color-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("/images/bg-curve-desktop.svg");
+    background-position: 0 848px;
+    background-size: 102.4% auto; /* a curva é 1474px num frame de 1440px */
+  }
+}
+
+/* Esconde visualmente, mas mantém para leitores de tela (labels de formulário etc.) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+main {
+  min-width: 0; /* deixa o conteúdo encolher dentro da grid em telas pequenas */
+}
+
+li {
+  list-style-type: none;
+}

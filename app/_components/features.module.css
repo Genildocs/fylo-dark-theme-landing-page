@@ -1,0 +1,63 @@
+.features {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--spacing-1000);
+  width: 100%;
+  max-width: 384px;
+  scroll-margin-top: var(--spacing-400);
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+  text-align: center;
+}
+
+/* Caixa de 104px do design; no mobile o ícone inteiro encolhe para 80px */
+.icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 104px;
+  height: 104px;
+  zoom: calc(80 / 104);
+}
+
+.icon__layer {
+  position: absolute;
+  max-width: none;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+
+/* Text Preset 2 */
+.title {
+  composes: textPreset2 from "../styles/Typography.module.css";
+}
+
+/* Text Preset 8 */
+.description {
+  composes: textPreset8 from "../styles/Typography.module.css";
+}
+
+/* ---------- Desktop: grade 2 × 2 ---------- */
+@media (min-width: 1024px) {
+  .features {
+    grid-template-columns: 363px 384px;
+    column-gap: 160px;
+    max-width: 907px;
+  }
+
+  .feature {
+    gap: var(--spacing-200);
+  }
+
+  .icon {
+    zoom: 1;
+  }
+}

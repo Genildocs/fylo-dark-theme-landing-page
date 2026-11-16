@@ -1,0 +1,82 @@
+/**
+ * Spacing utility classes from the Figma Design System → Spacing section.
+ * Requires tokens.css to be imported globally.
+ *
+ * Usage:
+ *   import spacing from '@/styles/Spacing.module.css';
+ *   <div className={`${spacing.mt400} ${spacing.px300}`}>...</div>
+ */
+
+/* Margin — all sides */
+.m100 { margin: var(--spacing-100); }
+.m200 { margin: var(--spacing-200); }
+.m300 { margin: var(--spacing-300); }
+.m400 { margin: var(--spacing-400); }
+.m500 { margin: var(--spacing-500); }
+.m600 { margin: var(--spacing-600); }
+.m700 { margin: var(--spacing-700); }
+.m800 { margin: var(--spacing-800); }
+.m900 { margin: var(--spacing-900); }
+.m1000 { margin: var(--spacing-1000); }
+.m1600 { margin: var(--spacing-1600); }
+
+/* Margin-top */
+.mt100 { margin-top: var(--spacing-100); }
+.mt200 { margin-top: var(--spacing-200); }
+.mt300 { margin-top: var(--spacing-300); }
+.mt400 { margin-top: var(--spacing-400); }
+.mt500 { margin-top: var(--spacing-500); }
+.mt600 { margin-top: var(--spacing-600); }
+.mt700 { margin-top: var(--spacing-700); }
+.mt800 { margin-top: var(--spacing-800); }
+.mt900 { margin-top: var(--spacing-900); }
+.mt1000 { margin-top: var(--spacing-1000); }
+.mt1600 { margin-top: var(--spacing-1600); }
+
+/* Margin-bottom */
+.mb100 { margin-bottom: var(--spacing-100); }
+.mb200 { margin-bottom: var(--spacing-200); }
+.mb300 { margin-bottom: var(--spacing-300); }
+.mb400 { margin-bottom: var(--spacing-400); }
+.mb500 { margin-bottom: var(--spacing-500); }
+.mb600 { margin-bottom: var(--spacing-600); }
+.mb700 { margin-bottom: var(--spacing-700); }
+.mb800 { margin-bottom: var(--spacing-800); }
+.mb900 { margin-bottom: var(--spacing-900); }
+.mb1000 { margin-bottom: var(--spacing-1000); }
+.mb1600 { margin-bottom: var(--spacing-1600); }
+
+/* Padding — all sides */
+.p100 { padding: var(--spacing-100); }
+.p200 { padding: var(--spacing-200); }
+.p300 { padding: var(--spacing-300); }
+.p400 { padding: var(--spacing-400); }
+.p500 { padding: var(--spacing-500); }
+.p600 { padding: var(--spacing-600); }
+.p700 { padding: var(--spacing-700); }
+.p800 { padding: var(--spacing-800); }
+.p900 { padding: var(--spacing-900); }
+.p1000 { padding: var(--spacing-1000); }
+.p1600 { padding: var(--spacing-1600); }
+
+/* Padding — horizontal / vertical */
+.px100 { padding-left: var(--spacing-100); padding-right: var(--spacing-100); }
+.px200 { padding-left: var(--spacing-200); padding-right: var(--spacing-200); }
+.px300 { padding-left: var(--spacing-300); padding-right: var(--spacing-300); }
+.px400 { padding-left: var(--spacing-400); padding-right: var(--spacing-400); }
+.px500 { padding-left: var(--spacing-500); padding-right: var(--spacing-500); }
+
+.py100 { padding-top: var(--spacing-100); padding-bottom: var(--spacing-100); }
+.py200 { padding-top: var(--spacing-200); padding-bottom: var(--spacing-200); }
+.py300 { padding-top: var(--spacing-300); padding-bottom: var(--spacing-300); }
+.py400 { padding-top: var(--spacing-400); padding-bottom: var(--spacing-400); }
+.py500 { padding-top: var(--spacing-500); padding-bottom: var(--spacing-500); }
+
+/* Gap (flex/grid) */
+.gap100 { gap: var(--spacing-100); }
+.gap200 { gap: var(--spacing-200); }
+.gap300 { gap: var(--spacing-300); }
+.gap400 { gap: var(--spacing-400); }
+.gap500 { gap: var(--spacing-500); }
+.gap600 { gap: var(--spacing-600); }
+.gap800 { gap: var(--spacing-800); }
